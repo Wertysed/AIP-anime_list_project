@@ -23,5 +23,9 @@ def top_manga():
 def anime_search():
     return render_template('anime_search.html', title='anime_search')
 
+@app.route('/manga_search')
+def manga_search():
+    return render_template('manga_search.html', title='anime_search')
+
 if __name__ == '__main__':
     app.run()

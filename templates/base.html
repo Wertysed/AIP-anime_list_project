@@ -29,7 +29,7 @@
         <li class="nav-item dropdown">
           <a class="nav-link active" aria-current="page" href="{{ url_for('top_anime') }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Anime</a>
            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Anime Search</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('anime_search') }}">Anime Search</a></li>
             <li><a class="dropdown-item" href="{{ url_for('top_anime') }}">Top Anime</a></li>
             <!--<li><hr class="dropdown-divider"></li-->
             <li><a class="dropdown-item" href="#">Reviews</a></li>
@@ -40,7 +40,7 @@
               Manga
           </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{ url_for('anime_search') }}">Manga Search</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('manga_search') }}">Manga Search</a></li>
             <li><a class="dropdown-item" href="{{ url_for('top_manga') }}">Top Manga</a></li>
             <!--<li><hr class="dropdown-divider"></li-->
             <li><a class="dropdown-item" href="#">Reviews</a></li>
