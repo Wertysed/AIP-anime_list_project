@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Ranobe Search
+{% endblock %}
+{% block content %}
+
+<section>
+<div class="container">
+  <div class="row">
+            <div class="card" >
+          <div class="card-body d-flex justify-content-center">
+      <div><h3>Aboba's Profile</h3></div>
+          </div></div>
+      <div><br></div>
+    <div class="col-sm-4">
+            <div class="col">
+      <div class="card" >
+          <div class="card-body d-flex justify-content-center">
+
+            <div class="card" style="width: 18rem;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Google_Photos_icon_%282020%29.svg/200px-Google_Photos_icon_%282020%29.svg.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h4 class="card-title text-center">Aboba</h4>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item d-flex justify-content-evenly"><a type="button" class="btn btn-primary" href="{{ url_for('ranobe_search') }}" >Anime</a> <a type="button" class="btn btn-primary" href="{{ url_for('ranobe_search') }}" >Manga</a> <a type="button" class="btn btn-primary" href="{{ url_for('ranobe_search') }}" >Ranobe</a></li>
+  </ul>
+</div>
+          </div>
+
+          <div class="card-body">        <table class="table caption-top">
+  <thead>
+    <tr class="table-primary">
+      <th scope="col">#</th>
+      <th scope="col" colspan="2">Last Three Apdates</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><a class = "image" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg"><img src="https://cdn.myanimelist.net/r/50x70/images/anime/1430/118919.webp?s=75263c5e1af8ccd81ffc68634fb72d2f" alt="" ></a></td>
+      <td><div><a class = "abobus" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >Kaguya-sama wa Kokurasetai: Ultra Romantic</a></div></td>
+
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><a class = "image" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg"><img src="https://cdn.myanimelist.net/r/50x70/images/anime/6/73245.jpg?s=f792b8c9e28534ae455d06b15e686a14" alt="" ></a></td>
+      <td><div><a class = "abobus" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >One Piece</a></div></td>
+
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><a class = "image" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg"><img src="https://cdn.myanimelist.net/r/50x70/images/anime/1259/110227.jpg?s=08c77f58ab974a8fc36af5e2eac9040a" alt="" ></a></td>
+      <td><div><a class = "abobus" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >Holo no Graffiti</a></div></td>
+
+    </tr>
+  </tbody>
+</table></div>
+
+      </div>
+            </div>
+    </div>
+        <div class="col-sm-8">
+            <div class="col">
+      <div class="card" >
+        <div class="card-body d-flex ">
+            <div class="card flex-fill border-warning mb-3" >
+  <div class="card-header"><h5>Anime Stats</h5></div>
+  <div class="card-body">
+      <div class="d-flex justify-content-between "><span class="text-right">Days: </span> <span class="text-left">Mean Score: </span></div>
+    <div class="progress flex-fill d-flex">
+  <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-secondary" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
+      <div class="card-body "> <div class="row"><div class="col-sm-4"> <div class="col">  <p class="card-text d-flex justify-content-between"><span class="badge rounded-pill bg-success" style="font-size: 1em">Watching</span> <span>12</span></p>
+<p class="card-text d-flex justify-content-between"><span class="badge rounded-pill bg-primary" style="font-size: 1em">Completed</span><span>12</span></p>
+<p class="card-text d-flex justify-content-between"><span class="badge rounded-pill bg-warning  text-dark" style="font-size: 1em">On-Hold</span><span>12</span></p>
+<p class="card-text d-flex justify-content-between"><span class="badge rounded-pill bg-danger" style="font-size: 1em">Dropped</span><span>12</span></p>
+          <p class="card-text d-flex justify-content-between"><span class="badge rounded-pill bg-secondary " style="font-size: 1em">Plan to Watch</span><span>12</span></p></div> </div>
+          <div class="col-sm-4"> <div class="col"></div> </div>
+          <div class="col-sm-4"> <div class="col"> <p class="card-text d-flex justify-content-between"><span>Total Entries</span><span>12</span></p>
+          <p class="card-text d-flex justify-content-between"><span>Episodes</span><span>12</span></p>
+          </div> </div></div>
+  </div>
+</div>
+</div>
+
+                </div>
+
+                  <div class="card-body d-flex ">
+            <div class="card flex-fill border-danger mb-3" >
+  <div class="card-header"><h5>Manga Stats</h5></div>
+  <div class="card-body">
+      <div class="d-flex justify-content-between "><span class="text-right">Days: </span> <span class="text-left">Mean Score: </span></div>
+    <div class="progress flex-fill d-flex">
+  <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-secondary" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
+      <div class="card-body "> <div class="row"><div class="col-sm-4"> <div class="col">  <p class="card-text d-flex justify-content-between"><span class="badge rounded-pill bg-success" style="font-size: 1em">Reading</span> <span>12</span></p>
+<p class="card-text d-flex justify-content-between"><span class="badge rounded-pill bg-primary" style="font-size: 1em">Completed</span><span>12</span></p>
+<p class="card-text d-flex justify-content-between"><span class="badge rounded-pill bg-warning  text-dark" style="font-size: 1em">On-Hold</span><span>12</span></p>
+<p class="card-text d-flex justify-content-between"><span class="badge rounded-pill bg-danger" style="font-size: 1em">Dropped</span><span>12</span></p>
+          <p class="card-text d-flex justify-content-between"><span class="badge rounded-pill bg-secondary " style="font-size: 1em">Plan to Read</span><span>12</span></p></div> </div>
+          <div class="col-sm-4"> <div class="col"></div> </div>
+          <div class="col-sm-4"> <div class="col"> <p class="card-text d-flex justify-content-between"><span>Total Entries</span><span>12</span></p>
+          <p class="card-text d-flex justify-content-between"><span>Chapters</span><span>12</span></p>
+              <p class="card-text d-flex justify-content-between"><span>Volumes</span><span>12</span></p>
+          </div> </div></div>
+  </div>
+</div>
+</div>
+
+                </div>
+                            <div class="card-body d-flex ">
+            <div class="card flex-fill border-success mb-3" >
+  <div class="card-header"><h5>Ranobe Stats</h5></div>
+  <div class="card-body">
+      <div class="d-flex justify-content-between "><span class="text-right">Days: </span> <span class="text-left">Mean Score: </span></div>
+    <div class="progress flex-fill d-flex">
+  <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-success" role="progressbar" style="width: 20%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-secondary" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
+      <div class="card-body "> <div class="row"><div class="col-sm-4"> <div class="col">  <p class="card-text d-flex justify-content-between"><span class="badge rounded-pill bg-success" style="font-size: 1em">Reading</span> <span>12</span></p>
+<p class="card-text d-flex justify-content-between"><span class="badge rounded-pill bg-primary" style="font-size: 1em">Completed</span><span>12</span></p>
+<p class="card-text d-flex justify-content-between"><span class="badge rounded-pill bg-warning  text-dark" style="font-size: 1em">On-Hold</span><span>12</span></p>
+<p class="card-text d-flex justify-content-between"><span class="badge rounded-pill bg-danger" style="font-size: 1em">Dropped</span><span>12</span></p>
+          <p class="card-text d-flex justify-content-between"><span class="badge rounded-pill bg-secondary " style="font-size: 1em">Plan to Read</span><span>12</span></p></div> </div>
+          <div class="col-sm-4"> <div class="col"></div> </div>
+          <div class="col-sm-4"> <div class="col"> <p class="card-text d-flex justify-content-between"><span>Total Entries</span><span>12</span></p>
+          <p class="card-text d-flex justify-content-between"><span>Chapters</span><span>12</span></p>
+              <p class="card-text d-flex justify-content-between"><span>Volumes</span><span>12</span></p>
+          </div> </div></div>
+  </div>
+</div>
+</div>
+
+                </div>
+
+        </div>
+      </div>
+            </div>
+  </div></div>
+
+</section>
+
+{% endblock %}

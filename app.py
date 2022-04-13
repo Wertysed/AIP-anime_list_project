@@ -35,5 +35,22 @@ def ranobe_search():
 def top_ranobe():
     return render_template('top_ranobe.html', title='top anime')
 
+@app.route('/anime_page')
+def anime_page():
+    return render_template('anime_page.html', title='top anime')
+
+@app.route('/manga_page')
+def manga_page():
+    return render_template('manga_and_ranobe.html', title='top anime')
+
+@app.route('/ranobe_page')
+def ranobe_page():
+    return render_template('manga_and_ranobe.html', title='top anime')
+
+@app.route('/profile')
+def profile_page():
+    return render_template('profile_page.html', title='top anime')
+
+
 if __name__ == '__main__':
     app.run()
