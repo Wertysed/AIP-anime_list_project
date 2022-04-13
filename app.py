@@ -51,6 +51,18 @@ def ranobe_page():
 def profile_page():
     return render_template('profile_page.html', title='top anime')
 
+@app.route('/anime_list')
+def anime_list():
+    return render_template('anime_list.html', title='top anime')
+
+@app.route('/manga_list')
+def manga_list():
+    return render_template('manga_list.html', title='top anime')
+
+@app.route('/ranobe_list')
+def ranobe_list():
+    return render_template('ranobe_list.html', title='top anime')
+
 
 if __name__ == '__main__':
     app.run()
