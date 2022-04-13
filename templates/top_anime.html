@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Топ Аниме
+{% endblock %}
+
+{% block content %}
+<section>
+<div class="container">
+    <div class = "card">
+            <div class = 'card-body'>
+  <div class="row">
+    <div> <h3>Top Anime</h3></div>
+    <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Rank</th>
+      <th scope="col">Title</th>
+      <th scope="col">Score</th>
+      <th scope="col">Your Score</th>
+        <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" class="top-anime-rank-text"><span class=" top-anime-rank-text rank1">1</span></th>
+      <td class="title al va-t word-break">
+       <a class = "image" style="position: relative; display: inline-block; float: left" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg"><img src="https://cdn.myanimelist.net/r/50x70/images/anime/1259/110227.jpg?s=08c77f58ab974a8fc36af5e2eac9040a" alt="" ></a>
+        <div class="detail"><h6 class=""><a class = "link-default" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >One Piece</a> </h6>
+        <div class="black_text"><small class="text-muted">эпизоды <br> дата выхода</small></div></div>
+      </td>
+      <td class="score">9.12</td>
+      <td class="score">9.12</td>
+      <td class="status">Watched</td>
+    </tr>
+    <tr>
+      <th scope="row" class="top-anime-rank-text"><span class=" top-anime-rank-text rank1">1</span></th>
+      <td class="title al va-t word-break">
+       <a class = "image" style="position: relative; display: inline-block; float: left" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg"><img src="https://cdn.myanimelist.net/r/50x70/images/anime/1259/110227.jpg?s=08c77f58ab974a8fc36af5e2eac9040a" alt="" ></a>
+        <div class="detail"><h6 class=""><a class = "link-default" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >One Piece</a> </h6>
+        <div class="black_text"><small class="text-muted">эпизоды <br> дата выхода</small></div></div>
+      </td>
+      <td class="score">9.12</td>
+      <td class="score">9.12</td>
+      <td class="status">Watched</td>
+    </tr>
+    <tr>
+      <th scope="row" class="top-anime-rank-text"><span class=" top-anime-rank-text rank1">1</span></th>
+      <td class="title al va-t word-break">
+       <a class = "image" style="position: relative; display: inline-block; float: left" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg"><img src="https://cdn.myanimelist.net/r/50x70/images/anime/1259/110227.jpg?s=08c77f58ab974a8fc36af5e2eac9040a" alt="" ></a>
+        <div class="detail"><h6 class=""><a class = "link-default" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >One Piece</a> </h6>
+        <div class="black_text"><small class="text-muted">эпизоды <br> дата выхода</small></div></div>
+      </td>
+      <td class="score">9.12</td>
+      <td class="score">9.12</td>
+      <td class="status">Watched</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+            </div>
+</div>
+</div>
+ <nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+</section>
+
+{% endblock %}
