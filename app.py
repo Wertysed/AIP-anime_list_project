@@ -27,5 +27,13 @@ def anime_search():
 def manga_search():
     return render_template('manga_search.html', title='anime_search')
 
+@app.route('/ranobe_search')
+def ranobe_search():
+    return render_template('ranobe_search.html', title='anime_search')
+
+@app.route('/top_ranobe')
+def top_ranobe():
+    return render_template('top_ranobe.html', title='top anime')
+
 if __name__ == '__main__':
     app.run()
