@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Ranobe Search
+{{ manga.title}}
 {% endblock %}
 {% block content %}
     <section>
@@ -12,9 +12,9 @@ Ranobe Search
       <div class="card" >
           <div class="card-body d-flex justify-content-center">
             <div class="card border-danger" style="width: 18rem;">
-  <img src="https://cdn.myanimelist.net/images/anime/1637/109512.jpg" class="card-img-top" alt="...">
+  <img src="{{ manga.img}}" class="card-img-top" alt="...">
   <div class="card-body">
-    <h3 class="card-title text-center">Manga Name</h3>
+    <h3 class="card-title text-center">{{ manga.title}}</h3>
   </div>
 </div>
               <div><br></div> </div>
@@ -23,14 +23,15 @@ Ranobe Search
   <div class="card-header">    <h5 class="card-title ">Information</h5></div>
   <div class="card-body">
 
-    <p class="card-text">Type: </p>
-      <p class="card-text">Volumes: </p>
-      <p class="card-text">Chapters: </p>
-    <p class="card-text">Status: </p>
-      <p class="card-text">Genres: </p>
-      <p class="card-text">Score: </p>
-      <p class="card-text">Ranked: </p>
-      <p class="card-text">Alternative titles: </p>
+    <p class="card-text">Type: {{ type.name }}</p>
+      <p class="card-text">Volumes: {{ manga.volumes }}</p>
+      <p class="card-text">Chapters: {{ manga.chapters }}</p>
+    <p class="card-text">Status: {{ status.name }}</p>
+      <p class="card-text">Genres: {{ genre_manga }}</p>
+      <p class="card-text">Theme: {{ tag_manga }}</p>
+      <p class="card-text">Score: {{ manga.score }}</p>
+      <p class="card-text">Ranked: {{ manga.ranked }}</p>
+      <p class="card-text">Alternative titles: {{ manga.alternative_titles }}</p>
   </div>
 </div>
           </div>
@@ -51,9 +52,7 @@ Ranobe Search
               <div class="card flex-fill text-dark  mb-3 border-info bd-highlight" >
   <div class="card-header">    <h5 class="card-title ">Sinpopus</h5></div>
   <div class="card-body">
-           <p class="card-text">In a bright, grandiose city, a young boy and girl look for their partners amidst a technicolor tour de force. As the two embark on their respective quests, they encounter the familiar faces of those who have made their mark on the Pokémon world. Villains, champions, rivals, and professors alike grace the tallest skyscrapers and largest screens while the adventurous teens carry on in the search for their companions.
-
-Gotcha! takes its viewers on a nostalgic trip to the riveting realm of Pokémon, encapsulating the electrifying essence of the franchise. </p>
+           <p class="card-text">{{ manga.sinpopus }}</p>
 </div>
           </div>
           </div>

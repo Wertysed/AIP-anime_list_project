@@ -2,7 +2,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Homepage
+{{title}}
 {% endblock %}
 {% block content %}
     <div>
@@ -15,51 +15,51 @@ Homepage
       <div> <h3>Top 5 Anime</h3></div>
         <div><div class="card-group">
   <div class="card">
-    <img src="https://animego.org/media/cache/thumbs_250x350/upload/anime/images/5a46d2c0d298e.jpg" width="160" height="220" class="card-img-top" alt="...">
+    <img src="{{ inf_top_anime[0].img }}" width="160" height="220" class="card-img-top" alt="...">
     <div class="card-body">
 
-      <h5 class="card-title"><a class = "link-default" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >Fullmetal Alchemist</a></h5>
-      <p class="card-text"> приключения, боевик, комедия, драма, фэнтези</p>
+      <h5 class="card-title"><a class = "link-default" href="{{ url_for('anime_page', id=inf_top_anime[0].id)   }}" >{{ inf_top_anime[0].title }}</a></h5>
+      <p class="card-text"> {{inf_genre_top_anime[0]}}</p>
     </div>
       <div class="card-footer">
           <small class="text-muted">Last updated 3 mins ago</small>
           </div>
     </div>
    <div class="card">
-    <img src="https://cdn.myanimelist.net/images/anime/3/72078.jpg" width="160" height="220" class="card-img-top" alt="...">
+    <img src="{{ inf_top_anime[1].img }}" width="160" height="220" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title"><a class = "link-default" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >Gintama</a></h5>
-      <p class="card-text"> Action, Comedy, Sci-Fi</p>
+      <h5 class="card-title"><a class = "link-default" href="{{ url_for('anime_page', id=inf_top_anime[1].id)   }}" >{{ inf_top_anime[1].title }}</a></h5>
+      <p class="card-text"> {{inf_genre_top_anime[1]}}</p>
     </div>
       <div class="card-footer">
           <small class="text-muted">Last updated 3 mins ago</small>
           </div>
   </div>
  <div class="card">
-    <img src="https://cdn.myanimelist.net/images/anime/5/73199.jpg" width="160" height="220" class="card-img-top" alt="...">
+    <img src="{{ inf_top_anime[2].img }}" width="160" height="220" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title"><a class = "link-default" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >Steins;Gate</a></h5>
-      <p class="card-text"> Drama, Sci-Fi, Suspense</p>
+      <h5 class="card-title"><a class = "link-default" href="{{ url_for('anime_page', id=inf_top_anime[2].id)   }}" >{{ inf_top_anime[2].title }}</a></h5>
+      <p class="card-text"> {{inf_genre_top_anime[2]}}</p>
     </div>
       <div class="card-footer">
          <small class="text-muted">Last updated 3 mins ago</small>
           </div>
   </div>
  <div class="card">
-    <img src="https://cdn.myanimelist.net/images/anime/1517/100633.jpg" width="160" height="220" class="card-img-top" alt="...">
+    <img src="{{ inf_top_anime[3].img }}" width="160" height="220" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title"><a class = "link-default" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >Shingeki no Kyojin Season 3 Part 2</a></h5>
-      <p class="card-text"> Gore, Military, Survival</p>
+      <h5 class="card-title"><a class = "link-default" href="{{ url_for('anime_page', id=inf_top_anime[3].id)   }}" >{{ inf_top_anime[3].title }}</a></h5>
+      <p class="card-text"> {{inf_genre_top_anime[3]}}</p>
     </div>
       <div class="card-footer">
           <small class="text-muted">Last updated 3 mins ago</small>
           </div>
   </div>
  <div class="card">
-    <img src="https://cdn.myanimelist.net/images/anime/1988/113791.jpg" width="160" height="220" class="card-img-top" alt="...">
+    <img src="{{ inf_top_anime[4].img }}" width="160" height="220" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title"><a class = "link-default" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >Gintama: The Final</a></h5>
-      <p class="card-text">Action, Comedy, Drama, Sci-Fi</p>
+      <h5 class="card-title"><a class = "link-default" href="{{ url_for('anime_page', id=inf_top_anime[4].id)   }}" >{{ inf_top_anime[4].title }}</a></h5>
+      <p class="card-text">{{inf_genre_top_anime[4]}}</p>
     </div>
       <div class="card-footer">
           <small class="text-muted">Last updated 3 mins ago</small>
@@ -77,48 +77,23 @@ Homepage
         <div class="row">
     <div class="col">
       <div class="card">
-  <img src="https://cdn.myanimelist.net/images/anime/3/72078.jpg" width="160" height="220" class="card-img-top" alt="...">
+  <img src="{{ inf_spring_anime[0].img }}" width="160" height="220" class="card-img-top" alt="...">
   <div class="card-body">
-    <p class="card-text"><a class = "abobus" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >Kaguya-sama wa Kokurasetai: Ultra Romantic</a></p>
+    <p class="card-text"><a class = "abobus" href="{{ url_for('anime_page', id=inf_spring_anime[0].id)   }}" >{{ inf_spring_anime[0].title }}</a></p>
   </div>
 </div>    </div>
     <div class="col">
        <div class="card" >
-  <img src="https://cdn.myanimelist.net/images/anime/3/72078.jpg" width="160" height="220" class="card-img-top" alt="...">
+  <img src="{{ inf_spring_anime[1].img }}" width="160" height="220" class="card-img-top" alt="...">
   <div class="card-body">
-    <p class="card-text"><a class = "abobus" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >Kaguya-sama wa Kokurasetai: Ultra Romantic</a></p>
+    <p class="card-text"><a class = "abobus" href="{{ url_for('anime_page', id=inf_spring_anime[1].id)   }}" >{{ inf_spring_anime[1].title }}</a></p>
   </div>
 </div>    </div>
     <div class="col">
       <div class="card" >
-  <img src="https://cdn.myanimelist.net/images/anime/3/72078.jpg" width="160" height="220" class="card-img-top" alt="...">
+  <img src="{{ inf_spring_anime[2].img }}" width="160" height="220" class="card-img-top" alt="...">
   <div class="card-body">
-    <p class="card-text"><a class = "abobus" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >Kaguya-sama wa Kokurasetai: Ultra Romantic</a></p>
-  </div>
-</div>    </div>
-  </div>
-    </div>
-    <div class="carousel-item">
-       <div class="row">
-    <div class="col">
-      <div class="card" >
-  <img src="https://cdn.myanimelist.net/images/anime/3/72078.jpg" width="160" height="220" class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text"><a class = "abobus" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >Kaguya-sama wa Kokurasetai: Ultra Romantic</a></p>
-  </div>
-</div>    </div>
-    <div class="col">
-      <div class="card" >
-  <img src="https://cdn.myanimelist.net/images/anime/3/72078.jpg" width="160" height="220" class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text"><a class = "abobus" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >Kaguya-sama wa Kokurasetai: Ultra Romantic</a></p>
-  </div>
-</div>    </div>
-    <div class="col">
-      <div class="card" >
-  <img src="https://cdn.myanimelist.net/images/anime/3/72078.jpg" width="160" height="220" class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text"><a class = "abobus" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >Kaguya-sama wa Kokurasetai: Ultra Romantic</a></p>
+    <p class="card-text"><a class = "abobus" href="{{ url_for('anime_page', id=inf_spring_anime[2].id)   }}" >{{ inf_spring_anime[2].title }}</a></p>
   </div>
 </div>    </div>
   </div>
@@ -127,23 +102,48 @@ Homepage
        <div class="row">
     <div class="col">
       <div class="card" >
-  <img src="https://cdn.myanimelist.net/images/anime/3/72078.jpg" width="160" height="220" class="card-img-top" alt="...">
+  <img src="{{ inf_spring_anime[3].img }}" width="160" height="220" class="card-img-top" alt="...">
   <div class="card-body">
-    <p class="card-text"><a class = "abobus" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >Kaguya-sama wa Kokurasetai: Ultra Romantic</a></p>
+    <p class="card-text"><a class = "abobus" href="{{ url_for('anime_page', id=inf_spring_anime[3].id)   }}" >{{ inf_spring_anime[3].title }}</a></p>
   </div>
 </div>    </div>
     <div class="col">
       <div class="card" >
-  <img src="https://cdn.myanimelist.net/images/anime/3/72078.jpg" width="160" height="220" class="card-img-top" alt="...">
+  <img src="{{ inf_spring_anime[4].img }}" width="160" height="220" class="card-img-top" alt="...">
   <div class="card-body">
-    <p class="card-text"><a class = "abobus" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >Kaguya-sama wa Kokurasetai: Ultra Romantic</a></p>
+    <p class="card-text"><a class = "abobus" href="{{ url_for('anime_page', id=inf_spring_anime[4].id)   }}" >{{ inf_spring_anime[4].title }}</a></p>
   </div>
 </div>    </div>
     <div class="col">
       <div class="card" >
-  <img src="https://cdn.myanimelist.net/images/anime/3/72078.jpg" width="160" height="220" class="card-img-top" alt="...">
+  <img src="{{ inf_spring_anime[5].img }}" width="160" height="220" class="card-img-top" alt="...">
   <div class="card-body">
-    <p class="card-text"><a class = "abobus" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >Kaguya-sama wa Kokurasetai: Ultra Romantic</a></p>
+    <p class="card-text"><a class = "abobus" href="{{ url_for('anime_page', id=inf_spring_anime[5].id)   }}" >{{ inf_spring_anime[5].title }}</a></p>
+  </div>
+</div>    </div>
+  </div>
+    </div>
+    <div class="carousel-item">
+       <div class="row">
+    <div class="col">
+      <div class="card" >
+  <img src="{{ inf_spring_anime[6].img }}" width="160" height="220" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text"><a class = "abobus" href="{{ url_for('anime_page', id=inf_spring_anime[6].id)   }}" >{{ inf_spring_anime[6].title }}</a></p>
+  </div>
+</div>    </div>
+    <div class="col">
+      <div class="card" >
+  <img src="{{ inf_spring_anime[7].img }}" width="160" height="220" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text"><a class = "abobus" href="{{ url_for('anime_page', id=inf_spring_anime[7].id)   }}" >{{ inf_spring_anime[7].title }}</a></p>
+  </div>
+</div>    </div>
+    <div class="col">
+      <div class="card" >
+  <img src="{{ inf_spring_anime[8].img }}" width="160" height="220" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text"><a class = "abobus" href="{{ url_for('anime_page', id=inf_spring_anime[8].id)   }}" >{{ inf_spring_anime[8].title }}</a></p>
   </div>
 </div>    </div>
   </div>
@@ -164,16 +164,16 @@ Homepage
         <div><br></div>
         <div class = "card">
             <div class = 'card-body'>
-        <div><h3>Updates to popular manga</h3></div>
+        <div><h3>Top 3 Manga</h3></div>
         <div class="card mb-3" style="max-width: 1500px;">
   <div class="row g-0">
     <div class="col-md-2">
-      <img src="https://cdn.myanimelist.net/s/common/store/cover/5703/75f9f81c17863f3819b7e2ad14d7bbd094b8e128401c2279a6de64c700d70395/l@2x.jpg" width="100" height="140" class="img-fluid rounded-start" alt="...">
+      <img src="{{ inf_top_manga[0].img }}" width="100" height="140" class="img-fluid rounded-start" alt="...">
     </div>
     <div class="col-md-10">
       <div class="card-body">
-        <div class="card-header"><h6 class="card-title"><a class = "link-default" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >One Piece</a> </h6></div>
-        <p class="card-text">Том 1 Глава 53425 <small class="text-muted">Последнее обновление 3 мин. назад</small></p>
+        <div class="card-header"><h6 class="card-title"><a class = "link-default" href="{{ url_for('manga_page', id=inf_top_manga[0].id)   }}" >{{ inf_top_manga[0].title }}</a> </h6></div>
+        <p class="card-text">Volumes {{ inf_top_manga[0].volumes }} Chapters {{ inf_top_manga[0].chapters}}</p>
       </div>
     </div>
   </div>
@@ -181,12 +181,12 @@ Homepage
                 <div class="card mb-3" style="max-width: 1500px;">
   <div class="row g-0">
     <div class="col-md-2">
-      <img src="https://cdn.myanimelist.net/s/common/store/cover/5703/75f9f81c17863f3819b7e2ad14d7bbd094b8e128401c2279a6de64c700d70395/l@2x.jpg" width="100" height="140" class="img-fluid rounded-start" alt="...">
+      <img src="{{ inf_top_manga[1].img }}" width="100" height="140" class="img-fluid rounded-start" alt="...">
     </div>
     <div class="col-md-10">
       <div class="card-body">
-        <div class="card-header"><h6 class="card-title"><a class = "link-default" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >One Piece</a> </h6></div>
-        <p class="card-text">Том 1 Глава 53425 <small class="text-muted">Последнее обновление 3 мин. назад</small></p>
+        <div class="card-header"><h6 class="card-title"><a class = "link-default" href="{{ url_for('manga_page', id=inf_top_manga[1].id)   }}" >{{ inf_top_manga[1].title }}</a> </h6></div>
+        <p class="card-text">Volumes {{ inf_top_manga[1].volumes }} Chapters {{ inf_top_manga[1].chapters}} </p>
       </div>
     </div>
   </div>
@@ -194,12 +194,12 @@ Homepage
                 <div class="card mb-3" style="max-width: 1500px;">
   <div class="row g-0">
     <div class="col-md-2">
-      <img src="https://cdn.myanimelist.net/s/common/store/cover/5703/75f9f81c17863f3819b7e2ad14d7bbd094b8e128401c2279a6de64c700d70395/l@2x.jpg" width="100" height="140" class="img-fluid rounded-start" alt="...">
+      <img src="{{ inf_top_manga[2].img }}" width="100" height="140" class="img-fluid rounded-start" alt="...">
     </div>
     <div class="col-md-10">
       <div class="card-body">
-        <div class="card-header"><h6 class="card-title"><a class = "link-default" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >One Piece</a> </h6></div>
-        <p class="card-text">Том 1 Глава 53425 <small class="text-muted">Последнее обновление 3 мин. назад</small></p>
+        <div class="card-header"><h6 class="card-title"><a class = "link-default" href="{{ url_for('manga_page', id=inf_top_manga[2].id)   }}" >{{ inf_top_manga[2].title }}</a> </h6></div>
+        <p class="card-text">Volumes {{ inf_top_manga[2].volumes }} Chapters {{ inf_top_manga[2].chapters}} </p>
 
       </div>
     </div>
@@ -244,20 +244,20 @@ Homepage
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td><a class = "image" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg"><img src="https://cdn.myanimelist.net/r/50x70/images/anime/1430/118919.webp?s=75263c5e1af8ccd81ffc68634fb72d2f" alt="" ></a></td>
-      <td><div><a class = "abobus" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >Kaguya-sama wa Kokurasetai: Ultra Romantic</a></div></td>
+      <td><a class = "image" href="{{ url_for('anime_page', id=inf_spring_anime[0].id)   }}"><img src="{{ inf_spring_anime[0].img }}" alt="" width="50" height="70" ></a></td>
+      <td><div><a class = "abobus" href="{{ url_for('anime_page', id=inf_spring_anime[0].id)   }}" >{{ inf_spring_anime[0].title }}</a></div></td>
 
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td><a class = "image" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg"><img src="https://cdn.myanimelist.net/r/50x70/images/anime/6/73245.jpg?s=f792b8c9e28534ae455d06b15e686a14" alt="" ></a></td>
-      <td><div><a class = "abobus" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >One Piece</a></div></td>
+      <td><a class = "image" href="{{ url_for('anime_page', id=inf_spring_anime[1].id)   }}"><img src="{{ inf_spring_anime[1].img }}" alt="" width="50" height="70" ></a></td>
+      <td><div><a class = "abobus" href="{{ url_for('anime_page', id=inf_spring_anime[1].id)   }}" >{{ inf_spring_anime[1].title }}</a></div></td>
 
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td><a class = "image" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg"><img src="https://cdn.myanimelist.net/r/50x70/images/anime/1259/110227.jpg?s=08c77f58ab974a8fc36af5e2eac9040a" alt="" ></a></td>
-      <td><div><a class = "abobus" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >Holo no Graffiti</a></div></td>
+      <td><a class = "image" href="{{ url_for('anime_page', id=inf_spring_anime[2].id)   }}"><img src="{{ inf_spring_anime[2].img }}" alt="" width="50" height="70"></a></td>
+      <td><div><a class = "abobus" href="{{ url_for('anime_page', id=inf_spring_anime[3].id)   }}" >{{ inf_spring_anime[2].title }}</a></div></td>
 
     </tr>
   </tbody>
@@ -274,20 +274,20 @@ Homepage
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td><a class = "image" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg"><img src="https://cdn.myanimelist.net/r/50x70/images/anime/1632/110707.jpg?s=e489bf840c9c4c9163591db80d2f063f" alt="" ></a></td>
-      <td><div><a class = "abobus" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >Chainsaw Man</a></div></td>
+      <td><a class = "image" href="{{ url_for('anime_page', id=inf_top_not[0].id)   }}"><img src="{{ inf_top_not[0].img }}" alt="" width="50" height="70"></a></td>
+      <td><div><a class = "abobus" href="{{ url_for('anime_page', id=inf_top_not[0].id)   }}" >{{ inf_top_not[0].title }}</a></div></td>
 
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td><a class = "image" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg"><img src="https://cdn.myanimelist.net/r/50x70/images/anime/1440/121382.jpg?s=71269026f2f9ddbee33406e4bfdb2393" alt="" ></a></td>
-      <td><div><a class = "abobus" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >Spy x Family</a></div></td>
+      <td><a class = "image" href="{{ url_for('anime_page', id=inf_top_not[1].id)   }}"><img src="{{ inf_top_not[1].img }}" alt="" width="50" height="70"></a></td>
+      <td><div><a class = "abobus" href="{{ url_for('anime_page', id=inf_top_not[1].id)   }}" >{{ inf_top_not[1].title }}</a></div></td>
 
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td><a class = "image" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg"><img src="https://cdn.myanimelist.net/r/50x70/images/anime/1406/104631.jpg?s=f6d480878204e18ad25c5cb7d3b62f47" alt="" ></a></td>
-      <td><div><a class = "abobus" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >Tate no Yuusha no Nariagari Season 3</a></div></td>
+      <td><a class = "image" href="{{ url_for('anime_page', id=inf_top_not[2].id)   }}"><img src="{{ inf_top_not[2].img }}" alt="" width="50" height="70"></a></td>
+      <td><div><a class = "abobus" href="{{ url_for('anime_page', id=inf_top_not[2].id)   }}" >{{ inf_top_not[2].title }}</a></div></td>
 
     </tr>
   </tbody>

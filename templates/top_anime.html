@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Top Anime
+    {{ title }}
 {% endblock %}
 
 {% block content %}
@@ -22,39 +22,19 @@
     </tr>
   </thead>
   <tbody>
+  {% for item in anime %}
     <tr>
-      <th scope="row" class="top-anime-rank-text"><span class=" top-anime-rank-text rank1">1</span></th>
+      <th scope="row" class="top-anime-rank-text"><span class=" top-anime-rank-text rank1">{{ item.ranked }}</span></th>
       <td class="title al va-t word-break">
-       <a class = "image" style="position: relative; display: inline-block; float: left" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg"><img src="https://cdn.myanimelist.net/r/50x70/images/anime/1259/110227.jpg?s=08c77f58ab974a8fc36af5e2eac9040a" alt="" ></a>
-        <div class="detail"><h6 class=""><a class = "link-default" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >One Piece</a> </h6>
-        <div class="black_text"><small class="text-muted">эпизоды <br> дата выхода</small></div></div>
+       <a class = "image" style="position: relative; display: inline-block; float: left" href="{{ url_for('anime_page', id=item.id) }}"><img src="{{ item.img }}" alt="" width="50" height="70" ></a>
+        <div class="detail"><h6 class=""><a class = "link-default" href="{{ url_for('anime_page', id=item.id) }}" >{{ item.title }}</a> </h6>
+        <div class="black_text"><small class="text-muted">Episodes {{ item.episodes }}</small></div></div>
       </td>
-      <td class="score">9.12</td>
-      <td class="score">9.12</td>
-      <td class="status">Watched</td>
+      <td class="score">{{ item.score }}</td>
+      <td class="score">N/A</td>
+      <td class="status">N/A</td>
     </tr>
-    <tr>
-      <th scope="row" class="top-anime-rank-text"><span class=" top-anime-rank-text rank1">1</span></th>
-      <td class="title al va-t word-break">
-       <a class = "image" style="position: relative; display: inline-block; float: left" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg"><img src="https://cdn.myanimelist.net/r/50x70/images/anime/1259/110227.jpg?s=08c77f58ab974a8fc36af5e2eac9040a" alt="" ></a>
-        <div class="detail"><h6 class=""><a class = "link-default" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >One Piece</a> </h6>
-        <div class="black_text"><small class="text-muted">эпизоды <br> дата выхода</small></div></div>
-      </td>
-      <td class="score">9.12</td>
-      <td class="score">9.12</td>
-      <td class="status">Watched</td>
-    </tr>
-    <tr>
-      <th scope="row" class="top-anime-rank-text"><span class=" top-anime-rank-text rank1">1</span></th>
-      <td class="title al va-t word-break">
-       <a class = "image" style="position: relative; display: inline-block; float: left" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg"><img src="https://cdn.myanimelist.net/r/50x70/images/anime/1259/110227.jpg?s=08c77f58ab974a8fc36af5e2eac9040a" alt="" ></a>
-        <div class="detail"><h6 class=""><a class = "link-default" href="https://www.meme-arsenal.com/memes/d80e757e7702cdf73fd53bc90bce45c3.jpg" >One Piece</a> </h6>
-        <div class="black_text"><small class="text-muted">эпизоды <br> дата выхода</small></div></div>
-      </td>
-      <td class="score">9.12</td>
-      <td class="score">9.12</td>
-      <td class="status">Watched</td>
-    </tr>
+    {% endfor %}
   </tbody>
 </table>
 
@@ -77,5 +57,5 @@
   </ul>
 
 </nav>
-
+</section>
 {% endblock %}

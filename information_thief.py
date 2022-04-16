@@ -6,11 +6,10 @@ import re
 from sqlalchemy import insert
 
 
-
 def take_url(url_, cls):
     index = []
     limit = 0
-    for i in range(10):
+    for i in range(1):
         url = f'{url_}{int(limit)}'
         req = requests.get(url)
         src = req.text
@@ -22,11 +21,6 @@ def take_url(url_, cls):
             index.append(all_link['href'])
         limit += 50
     return index
-
-
-
-
-
 
 
 def insert_inf_tags_genr(inf, SQL):
@@ -193,7 +187,6 @@ def manga_inf(cls, string):
 
                 genres = []
                 for ff in text:
-
                     filter = Genres.query.filter_by(name=ff.text.strip()).first()
 
                     genres.append(filter.id)
@@ -250,6 +243,7 @@ def anime_thief(urls):
             block_type = soap.find_all(class_='spaceit_pad')
 
             title_sql = title.text
+            print(title_sql)
 
             all_img = soap.find_all('img', limit=3)
             for rr in all_img:
@@ -272,7 +266,6 @@ def anime_thief(urls):
             if sinpopus_block == None:
                 sinpopus_block = 'No sinpopus'
 
-
             abobus = Anime(title=title_sql, img=img, type=type, episodes=episodes, status=status, ranked=ranked,
                            score=score, sinpopus=sinpopus_block, alternative_titles=alternative_titles)
             db.session.add(abobus)
@@ -293,6 +286,7 @@ def anime_thief(urls):
 
 
 def manga_thief(urls):
+
     for i in urls:
         url = i
         req = requests.get(url)
@@ -305,7 +299,7 @@ def manga_thief(urls):
             k = 0
             all_img = soap.find_all('img', limit=3)
             for rr in all_img:
-                k+=1
+                k += 1
                 if k == 3:
                     title_sql = rr['alt']
                     print(title_sql)
@@ -320,7 +314,7 @@ def manga_thief(urls):
             score = manga_inf(block_type, 'Score')
             alternative_titles = manga_inf(block_type, 'Synonyms')
             sinpopus_block = soap.find('span', attrs={"itemprop": "description"})
-            if sinpopus_block == None:
+            if sinpopus_block is None:
                 sinpopus_block = 'No sinpopus'
             else:
                 sinpopus_block = sinpopus_block.text
@@ -343,7 +337,10 @@ def manga_thief(urls):
                     db.session.execute(abobus_genr)
             db.session.commit()
 
-
-
-
+s = take_url('https://myanimelist.net/topanime.php?type=upcoming&limit=','hoverinfo_trigger fl-l fs14 fw-b anime_ranking_h3')
+while s.index('https://myanimelist.net/anime/49709/Fumetsu_no_Anata_e_2nd_Season') != 0:
+    s.pop(0)
+s.pop(0)
+print(s)
+anime_thief(s)
 
